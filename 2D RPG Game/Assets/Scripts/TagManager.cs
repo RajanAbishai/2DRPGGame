@@ -5,6 +5,8 @@ using UnityEngine;
 public class TagManager : MonoBehaviour
 {
 
+    public static string PLAYER_TAG = "Player";
+
     public static string PLAYER_ATTACKING_PARAMETER = "PlayerAttacking";
     public static string PLAYER_MOVING_PARAMETER = "PlayerMoving";
 

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3844546682328331874}
   - component: {fileID: 4015163364938683120}
   - component: {fileID: 3753965626228465464}
-  - component: {fileID: 3809359101639089488}
   - component: {fileID: 3859910331030632014}
   - component: {fileID: 3888988858342395194}
-  - component: {fileID: 3839967057615173711}
+  - component: {fileID: 1452490282}
+  - component: {fileID: 882425754753923030}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -62,6 +63,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -71,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1027781067
+  m_SortingLayerID: 390266275
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 532bbe56e4113a1479b51268899dcc03, type: 3}
@@ -104,22 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3809359101639089488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3839829600364765458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b510b61ba9e3f7438c101990fa65cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 6
-  lastMove: {x: 0, y: 0}
-  attackTime: 0.15
-  startPoint: 
 --- !u!61 &3859910331030632014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3839967057615173711
+--- !u!114 &1452490282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,13 +162,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 3839829600364765458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d85d1e8eaf00924481c0347915cfe04, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b9786fff8bce00478bfd76c50ffc5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  panel: {fileID: 0}
+  lastMove: {x: 0, y: 0}
+  attackingTime: 0
+  startPoint: 
+--- !u!114 &882425754753923030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839829600364765458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6746bdaba0a6c9549bd48d8c991908e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerMaxHealth: 50
   playerCurrentHealth: 0
   healthBarLength: 0
-  theDeathScreen: {fileID: 0}
 --- !u!1 &3839967057379338328
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +227,6 @@ GameObject:
   - component: {fileID: 3839967057476665123}
   - component: {fileID: 3839967057476665124}
   - component: {fileID: 3839967057476665125}
-  - component: {fileID: 3839967057476665122}
   m_Layer: 0
   m_Name: WoodSword
   m_TagString: Untagged
@@ -262,6 +263,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -273,6 +275,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -283,7 +286,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1027781067
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 857e0268369b68b4dbf8041afbeb8491, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -322,22 +325,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.52}
   m_EdgeRadius: 0
---- !u!114 &3839967057476665122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3839967057476665126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225836d9c7f7b9a4d89d8a204f3d0cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageToGive: 5
-  damageBurst: {fileID: 1689938259169716, guid: cec48d640fc543b48838b5a1f2016a46,
-    type: 3}
-  hitPoint: {fileID: 3839967058769732169}
 --- !u!1 &3839967058769732170
 GameObject:
   m_ObjectHideFlags: 0

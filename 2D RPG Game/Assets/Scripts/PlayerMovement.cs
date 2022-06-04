@@ -44,6 +44,16 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
+        //Use the variable pos to store the player's position and set the z axis value to auto-update to 0
+        
+        /* THIS CODE DOES NOT SEEM NECESSARY
+        Vector3 pos = transform.position; 
+        pos.z = 0;
+        transform.position = pos;
+        */
+
+
+
         playerMoving = false;
 
         /*If you're not attacking but you receive input along the horizontal or vertical axis, move accordingly*/
