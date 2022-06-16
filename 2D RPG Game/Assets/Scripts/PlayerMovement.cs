@@ -109,6 +109,16 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool(TagManager.PLAYER_ATTACKING_PARAMETER,false);
         }
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            attackTimeCounter = attackingTime;
+            attacking = true;
+            myBody.velocity = Vector3.zero; //this is done to prevent the player from moving while attacking
+            
+            anim.SetBool(TagManager.PLAYER_ATTACKING_PARAMETER, true);
+
+
+        }
 
         anim.SetFloat(TagManager.PLAYER_X_MOVEMENT, Input.GetAxisRaw("Horizontal"));
         anim.SetFloat(TagManager.PLAYER_Y_MOVEMENT, Input.GetAxisRaw("Vertical"));

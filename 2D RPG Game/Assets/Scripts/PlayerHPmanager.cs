@@ -44,7 +44,7 @@ public class PlayerHPmanager : MonoBehaviour
 
     }
 
-    public void SexMaxHealth()
+    public void SetMaxHealth()
     {
         playerCurrentHealth -= playerMaxHealth;
     }

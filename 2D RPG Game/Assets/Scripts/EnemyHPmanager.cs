@@ -7,8 +7,12 @@ public class EnemyHPmanager : MonoBehaviour
     public float enemyMaxHealth;
     public float enemyCurrentHealth;
     
+    /*seemed to work even without it or no compiler error*/
+    public static EnemyHPmanager instance; 
+    
     void Start()
     {
+        makeInstance();
         enemyCurrentHealth = enemyMaxHealth;
     }
 
@@ -20,6 +24,14 @@ public class EnemyHPmanager : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    void makeInstance()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
 

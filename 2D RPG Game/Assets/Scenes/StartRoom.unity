@@ -414,6 +414,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3839967057476665124, guid: 3b97cb396c596b9469e8287dec9189bb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839967057476665124, guid: 3b97cb396c596b9469e8287dec9189bb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839967057476665124, guid: 3b97cb396c596b9469e8287dec9189bb,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 390266275
+      objectReference: {fileID: 0}
     - target: {fileID: 3844546682328331874, guid: 3b97cb396c596b9469e8287dec9189bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -489,6 +504,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6746bdaba0a6c9549bd48d8c991908e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1452490283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3839967057476665126, guid: 3b97cb396c596b9469e8287dec9189bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1452490280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1452490284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452490283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d405f277ccbc14ebdbc8c726650d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGiveEnemy: 5
+  damageBurst: {fileID: 1689938259169716, guid: cec48d640fc543b48838b5a1f2016a46,
+    type: 3}
+  hitPoint: {fileID: 1452490285}
+--- !u!4 &1452490285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3839967058769732169, guid: 3b97cb396c596b9469e8287dec9189bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1452490280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1472178964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3573879492211507425, guid: 8448c039f88366240804a7dc3923f927,
@@ -723,13 +766,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3573879493675556789, guid: 8448c039f88366240804a7dc3923f927,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0710214
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573879493675556789, guid: 8448c039f88366240804a7dc3923f927,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000091552734
+      value: 241
       objectReference: {fileID: 0}
     - target: {fileID: 3573879493675556789, guid: 8448c039f88366240804a7dc3923f927,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 146
       objectReference: {fileID: 0}
     - target: {fileID: 3573879493691748677, guid: 8448c039f88366240804a7dc3923f927,
         type: 3}
