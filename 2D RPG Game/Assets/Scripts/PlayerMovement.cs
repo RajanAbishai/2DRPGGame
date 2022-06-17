@@ -19,7 +19,11 @@ public class PlayerMovement : MonoBehaviour
     private float attackTimeCounter; //counter of attacking time
 
 
-    
+    public int scoreForPear = 3, scoreForPrettyPear = 6, scoreForIceCream = 9;
+    private float healthForPear = 3.5f, healthForPrettyPear = 6.5f, healthForIceCream = 9f;
+
+
+
     void Start()
     {
 
@@ -130,7 +134,45 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == TagManager.PEAR_TAG)
+        {
+            
+            Score.instance.ScoreUp(scoreForPear);
+            PlayerHPmanager.instance.playerCurrentHealth += healthForPear;
+            collision.gameObject.SetActive(false);
+        }
+
+
+        if (collision.gameObject.tag == TagManager.PRETTY_PEAR_TAG)
+        {
+            Score.instance.ScoreUp(scoreForPrettyPear);
+            PlayerHPmanager.instance.playerCurrentHealth += healthForPrettyPear;
+            collision.gameObject.SetActive(false);
+        }
+
+
+        if (collision.gameObject.tag == TagManager.ICE_CREAM_TAG)
+        {
+            Score.instance.ScoreUp(scoreForIceCream);
+            PlayerHPmanager.instance.playerCurrentHealth += healthForIceCream;
+            collision.gameObject.SetActive(false);
+        }
+
+        if (collision.gameObject.tag == TagManager.FINISH_FLAG_TAG)
+        {
+            Time.timeScale = 0f;
+
+            collision.gameObject.SetActive(false);
+        }
+
+
+
+
+    }
 
 
 
