@@ -11,16 +11,24 @@ public class PlayerDestination : MonoBehaviour
     private CameraFollow theCamera;
     public Vector2 startDirection;
 
+    public string point;
+
     
     void Start()
     {
         thePlayer = FindObjectOfType<PlayerMovement>();
 
-        thePlayer.transform.position = transform.position;  //This is the current position of our player on the left, On the right.. the spawn point?    //this will be positioned in the other scene
-        thePlayer.lastMove = startDirection;
+        if (thePlayer.startPoint == point)
+        {
+            thePlayer.transform.position = transform.position;  //This is the current position of our player on the left, On the right.. the spawn point?    //this will be positioned in the other scene
+            thePlayer.lastMove = startDirection;
 
-        theCamera = FindObjectOfType<CameraFollow>();
-        theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z);
+            theCamera = FindObjectOfType<CameraFollow>();
+            theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z);
+
+        }
+
+        
     }
 
 }

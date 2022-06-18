@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private float attackTimeCounter; //counter of attacking time
 
 
-    public int scoreForPear = 3, scoreForPrettyPear = 6, scoreForIceCream = 9;
+    public int scoreForPear = 1, scoreForPrettyPear = 1, scoreForIceCream = 1;
+
     private float healthForPear = 3.5f, healthForPrettyPear = 6.5f, healthForIceCream = 9f;
 
 
@@ -134,48 +135,49 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
+
     
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == TagManager.PEAR_TAG)
+        if (collision.tag == TagManager.PEAR_TAG)
         {
-            
-            Score.instance.ScoreUp(scoreForPear);
+            print("touched the pear");
+            Score.instance.ScoreUp();
             PlayerHPmanager.instance.playerCurrentHealth += healthForPear;
             collision.gameObject.SetActive(false);
         }
 
 
-        if (collision.gameObject.tag == TagManager.PRETTY_PEAR_TAG)
+        if (collision.tag == TagManager.PRETTY_PEAR_TAG)
         {
-            Score.instance.ScoreUp(scoreForPrettyPear);
+            print("touched pretty pear");
+            Score.instance.ScoreUp();
             PlayerHPmanager.instance.playerCurrentHealth += healthForPrettyPear;
             collision.gameObject.SetActive(false);
         }
 
-
-        if (collision.gameObject.tag == TagManager.ICE_CREAM_TAG)
+        if (collision.tag == TagManager.ICE_CREAM_TAG)
         {
-            Score.instance.ScoreUp(scoreForIceCream);
+            print("touched ice cream");
+            Score.instance.ScoreUp();
             PlayerHPmanager.instance.playerCurrentHealth += healthForIceCream;
             collision.gameObject.SetActive(false);
         }
 
-        if (collision.gameObject.tag == TagManager.FINISH_FLAG_TAG)
+        if (collision.tag == TagManager.FINISH_FLAG_TAG)
         {
             Time.timeScale = 0f;
-
-            collision.gameObject.SetActive(false);
+            panel.SetActive(true);
         }
 
 
 
 
     }
-
-
-
 
 
 

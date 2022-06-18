@@ -215,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 8042008680729560412, guid: 9c8b50224f8845840a9cfbfe1a040641,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.93
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 8042008680729560412, guid: 9c8b50224f8845840a9cfbfe1a040641,
         type: 3}
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 0, y: 0}
+  point: 
 --- !u!1001 &986201926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439,4 +440,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToLoad: MainScene
-  ExitPoint: FromShed
+  ExitPoint: Shed Out

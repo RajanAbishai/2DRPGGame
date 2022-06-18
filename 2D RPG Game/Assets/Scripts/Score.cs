@@ -30,9 +30,9 @@ public class Score : MonoBehaviour
         
     }
 
-    public void ScoreUp(int scoreObtained) //different score for each pickup / kill
+    public void ScoreUp() //different score for each pickup / kill
     {
-        score+=scoreObtained;
+        score++;
 
         scoreText.text = score.ToString();  //converting to string to display it
     }

@@ -10,7 +10,7 @@ public class PlayerHPmanager : MonoBehaviour
     public float playerCurrentHealth;
     public float healthBarLength; // from the UI (slider)
 
-    //public deathMenu theDeathScreen;
+    public GameObject theDeathScreen;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class PlayerHPmanager : MonoBehaviour
     {
         if (playerCurrentHealth <= 0)
         {
+            theDeathScreen.SetActive(true);
             gameObject.SetActive(false);
 
             //activate DEATH MENU
